@@ -95,6 +95,25 @@
     background-color: var(--linen); 
 }
 
+form {
+    width: 50%; 
+    margin: 0 auto; 
+    position:absolute; 
+    top:50%; 
+    left: 25%;  
+    z-index:1; 
+    border:3px solid var(--cold-coffee); 
+    box-shadow: 2px 2px 10px black; 
+    padding: 20px; 
+}
+.form-label {
+
+}
+select {
+    margin-top:10px; 
+    margin-bottom:10px; 
+}
+
 @media only screen and (max-width: 1100px) {
     .custom-table {
         position:static; 
