@@ -14,6 +14,10 @@ $(document).ready(function(){
 });
 
 // Add a function to display form 
+var projectBtn = $(".add-project-btn"); 
+projectBtn.on("click", function() {
+    
+})
     // When user clicks on Add project btn, then user is taken to the form 
     //Use the show and hide jQuery animation for the form 
 

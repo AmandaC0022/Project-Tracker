@@ -34,51 +34,73 @@
       </div>
     </hero>
     <main>
-        <div class="card custom-card" style="width: 18rem;">
-            <img src="Calendar.jpeg" class="card-img-top card-image" alt="calendar image">
-            <div class="card-body custom-card-body">
-              <h5 class="card-title custom-card-title">Add a Project</h5>
-              <p class="card-text custom-card-text">Use this helpful Project Tracker to keep tabs on your tasks!</p>
-              <a href="#" class="btn btn-primary add-project-btn">Add Project</a>
-            </div>
+      <div class="card custom-card" style="width: 18rem;">
+          <img src="Calendar.jpeg" class="card-img-top card-image" alt="calendar image">
+          <div class="card-body custom-card-body">
+            <h5 class="card-title custom-card-title">Add a Project</h5>
+            <p class="card-text custom-card-text">Use this helpful Project Tracker to keep tabs on your tasks!</p>
+            <a href="#" class="btn btn-primary add-project-btn">Add Project</a>
+          </div>
+      </div>
+      <!-- Insert the form here 
+      Use needs to click add task button to be taken to the form 
+      form is displayed in front of page 
+      when form is complete, it populates the table  -->
+      <!-- table needs to include:
+        * name of the project = Project Name 
+        * type of project with a drop down list = Project Type
+        * hourly wage for project = Hourly Wage
+        *the due date of the project (use jQuery's datepicker with a minimum date set in place) = Due Date 
+        * Days until Due Date (use Moment.js to calculate)
+        * Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until due date)-->
+      <form>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Project Name</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Type Project Name here">
         </div>
-          <!-- Insert the form here 
-          Use needs to click add task button to be taken to the form 
-          form is displayed in front of page 
-          when form is complete, it populates the table  -->
-          <!-- table needs to include:
-            * name of the project = Project Name 
-            * type of project with a drop down list = Project Type
-            * hourly wage for project = Hourly Wage
-            *the due date of the project (use jQuery's datepicker with a minimum date set in place) = Due Date 
-            * Days until Due Date (use Moment.js to calculate)
-            * Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until due date)-->
-          <table class="table custom-table">
-            <thead class="table-head">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Project Name</th>
-                <th scope="col">Project Type</th>
-                <th scope="col">Hourly Wage</th>
-                <th scope="col">Due Date</th>
-                <th scope="col">Days Remaining</th>
-                <th scope="col">Estimated Total</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- This populates when user fills out the form -->
-              <tr>
-                <th scope="row">1</th>
-                <td>test</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Project Type</option>
+          <option value="1">Web Application (Front-End)</option>
+          <option value="2">Web Design (Front-End)</option>
+          <option value="3">Web Application (Back-End)</option>
+          <option value="4">Cybut Securty</option>
+        </select>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Hourly Rate ($)</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$">
+        </div>
+        <!-- Add a datepicker onto this input  -->
+        <div class="form-group">
+          <label for="formGroupExampleInput">Due Date</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+      </form>
+      <table class="table custom-table">
+        <thead class="table-head">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Project Name</th>
+            <th scope="col">Project Type</th>
+            <th scope="col">Hourly Wage</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Days Remaining</th>
+            <th scope="col">Estimated Total</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- This populates when user fills out the form -->
+          <tr>
+            <th scope="row">1</th>
+            <td>test</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     </main>
     <!-- javascript link  -->
 <script src="script.js"></script>
