@@ -17,7 +17,7 @@ $(document).ready(function(){
 // Add a function to display form 
 var projectBtn = $(".add-project-btn"); 
 projectBtn.on("click", function() {
-    $("form").show(1000); 
+    $(".custom-form").show(1000); 
 })
 
 
@@ -29,15 +29,16 @@ $(".submit-btn").on("click", function() {
     // I can only store 1 value in local storage at the moment. To store multiple use an array or Object. Turn them into a string and then store 
     $('#project-name-value').text(projectValue); 
     //Project Type 
-
+    var projectTypeValue = $("#project-type option:selected").text(); 
+    console.log(projectTypeValue); 
+    $('#project-type-value').text(projectTypeValue); 
     //Hourly Wage 
     var wageValue = $("#hourly-wage").val(); 
     $('#wage-value').text("$" + wageValue); 
-    console.log(wageValue); 
     //Due Date 
 
     //hides the form and populates the table 
-    $("form").hide();  
+    $(".custom-form").hide();  
 })
 
 $('#delete').on("click", function(){
