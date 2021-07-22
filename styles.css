@@ -8,17 +8,19 @@
 * {
     background-color: var(--almost-pure);
     font-size: 16px; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
 }
 
 #custom-jumbotron{
-    background-color: var(--linen) !Important; 
+    background: linear-gradient(var(--linen), var(--cold-coffee));  
 }
 
 .jumbotron-heading{
     text-align: center;
     color:var(--sour-cherry); 
     font-size: 4em;
-    background-color: var(--linen);
+    background-color: transparent;
+    font-weight: bold;
 }
 
 #custom-jumbotron p{
@@ -26,8 +28,81 @@
     background-color: var(--linen);
     text-align: center;
     font-size: 1.5em;
+    font-size: bold;
 }
 
 #custom-jumbotron>hr{
     border-top: 3px dashed var(--cold-coffee);  
+}
+
+.custom-card { 
+    border: 2px dashed var(--cold-coffee); 
+}
+
+.custom-card-body{
+    background: linear-gradient(var(--linen), var(--cold-coffee));
+}
+
+.custom-card-title{
+    background-color: transparent;
+    color: var(--sour-cherry); 
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.custom-card-text{
+    background-color: var(--linen);
+    padding: 5px; 
+}
+
+.add-project-btn {
+    background-color: var(--sour-cherry); 
+    text-align:center; 
+    display:block; 
+    font-size: 1.5em; 
+}
+
+.add-project-btn:hover{
+    cursor: pointer;
+    background-color: #7e0d44;
+}
+
+.custom-table {
+    position:absolute;  
+    width: 72%;  
+    right:0; 
+    top: 380px; 
+    border:2px dashed var(--cold-coffee); 
+}
+
+.table-head th{
+    text-align:center; 
+    color:var(--sour-cherry); 
+    background: linear-gradient(var(--linen), var(--cold-coffee));
+    /* border-bottom: 2px dashed var(--cold-coffee);  */
+}
+
+.custom-table th{
+    color:var(--sour-cherry); 
+}
+
+.custom-table {
+    text-align:center; 
+}
+
+.custom-table td:hover {
+    background-color: var(--linen); 
+}
+
+@media only screen and (max-width: 1000px) {
+    .custom-table {
+        position:static; 
+        width: 100%; 
+    }
+
+    .custom-card {
+        position:static; 
+        width: 100%; 
+    }
 }
