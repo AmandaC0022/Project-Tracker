@@ -24,12 +24,11 @@
 <body>
     <hero>
       <div id="custom-jumbotron" class="jumbotron">
-        <h1 class="display-4 jumbotron-heading">Project Tracker</h1>
+        <h1 class="display-3 jumbotron-heading">Project Tracker</h1>
         <p class="lead"> Today's Date & Time</p>
-        <hr class="my-4">
+        <!-- <hr class="my-4"> -->
         <p id="datetime"></p>
         <p class="lead">
-          <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
         </p>
       </div>
     </hero>
@@ -38,35 +37,40 @@
           <img src="Calendar.jpeg" class="card-img-top card-image" alt="calendar image">
           <div class="card-body custom-card-body">
             <h5 class="card-title custom-card-title">Add a Project</h5>
-            <p class="card-text custom-card-text">Use this helpful Project Tracker to keep tabs on your tasks!</p>
+            <p class="card-text custom-card-text">Use this helpful Project Tracker to keep tabs on all your tasks!</p>
             <a href="#" class="btn btn-primary add-project-btn">Add Project</a>
           </div>
       </div>
-        <!-- Project Name Input -->
+        <!-- Project Input -->
       <form class="custom-form">
-        <div class="form-group">
-          <label class="form-label" for="formGroupExampleInput">Project Name</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        <!-- Project Name Input -->
+        <div>
+          <label for="project-name">Project Name</label> <br>
+          <input type="text" placeholder="type here"
+          name="project-name" id="project-name"> 
         </div>
         <!-- Project Type Select  -->
-        <select class="form-select custom-form-select" aria-label="Default select example">
+        <label for="project-type">Project Type</label>
+        <select id="project-type">
           <option selected>Select Project Type</option>
-          <option value="1">Web Application (Front-End)</option>
-          <option value="2">Web Design (Front-End)</option>
-          <option value="3">Web Application (Back-End)</option>
-          <option value="4">Cyber Securty</option>
+          <option value="Web Application (Front-End">Web Application (Front-End)</option>
+          <option value="Web Design">Web Design</option>
+          <option value="Web Appliction (Back-End)">Web Application (Back-End)</option>
+          <option value="Cyber Security">Cyber Securty</option>
         </select>
         <!-- Hourly Wage Input -->
-        <div class="form-group">
-          <label for="formGroupExampleInput">Hourly Rate ($)</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$">
+        <div>
+          <label for="hourly-wage">Hourly Wage ($)</label> <br>
+          <input type="text" placeholder="$"
+          name="hourly-wage" id="hourly-wage"> 
         </div>
         <!-- Add a datepicker onto this input  -->
-        <div class="form-group">
-          <label for="formGroupExampleInput">Due Date</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        <div>
+          <label for="due-date">Due Date</label> <br>
+          <input type="text" placeholder="please select your due date"
+          name="due-date" id="due-date"> 
         </div>
-        <!-- Add a submit button -->
+        <button class="btn btn-outline submit-btn" type="submit">Submit Form</button>
       </form>
       <!-- Project Table -->
       <table class="table custom-table">
@@ -86,12 +90,12 @@
           <!-- This populates when user fills out the form -->
           <tr>
             <th scope="row">1</th>
-            <td>test</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="project-name-value"></td>
+            <td id="project-type-value"></td>
+            <td id="wage-value"></td>
+            <td id="due-date-value"></td>
+            <td id="days-remaining"></td>
+            <td id="delete"></td>
           </tr>
         </tbody>
       </table>

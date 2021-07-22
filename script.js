@@ -1,3 +1,4 @@
+
 //this controls the daily time display at the top 
 var datetime = null,
         date = null;
@@ -16,8 +17,37 @@ $(document).ready(function(){
 // Add a function to display form 
 var projectBtn = $(".add-project-btn"); 
 projectBtn.on("click", function() {
-    
+    $("form").show(1000); 
 })
+
+
+$(".submit-btn").on("click", function() {
+    //Project Name
+    //this only works with ids! 
+    var projectValue = $("#formGroupExampleInput").val(); 
+    // var projectValueLS = localStorage.setItem("Project Name", projectValue); 
+    // I can only store 1 value in local storage at the moment. To store multiple use an array or Object. Turn them into a string and then store 
+    $('#project-name-value').text(projectValue); 
+    //Project Type 
+
+    //Hourly Wage 
+    var wageValue = $("t").val(); 
+    $('#wage-value').text("$" + wageValue); 
+    console.log(wageValue); 
+    //Due Date 
+
+    //hides the form and populates the table 
+    $("form").hide();  
+})
+
+$('#delete').on("click", function(){
+    $("#project-name-value").text(" "); 
+    $("#project-type-value").text(" "); 
+    $("#wage-value").text(" "); 
+    $("#due-date-value").text(" "); 
+    $("#days-remaining").text(" "); 
+})
+
     // When user clicks on Add project btn, then user is taken to the form 
     //Use the show and hide jQuery animation for the form 
 
