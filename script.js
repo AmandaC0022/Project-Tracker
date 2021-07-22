@@ -24,14 +24,14 @@ projectBtn.on("click", function() {
 $(".submit-btn").on("click", function() {
     //Project Name
     //this only works with ids! 
-    var projectValue = $("#formGroupExampleInput").val(); 
+    var projectValue = $("#project-name").val(); 
     // var projectValueLS = localStorage.setItem("Project Name", projectValue); 
     // I can only store 1 value in local storage at the moment. To store multiple use an array or Object. Turn them into a string and then store 
     $('#project-name-value').text(projectValue); 
     //Project Type 
 
     //Hourly Wage 
-    var wageValue = $("t").val(); 
+    var wageValue = $("#hourly-wage").val(); 
     $('#wage-value').text("$" + wageValue); 
     console.log(wageValue); 
     //Due Date 

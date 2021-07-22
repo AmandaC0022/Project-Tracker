@@ -3,7 +3,6 @@
     --almost-pure: #FFFCFC; 
     --cold-coffee: #c98a3b; 
     --sour-cherry: #f10879; 
-    --golden: #e0a421; 
 }
 * {
     background-color: var(--almost-pure);
@@ -13,6 +12,9 @@
 
 #custom-jumbotron{
     background: linear-gradient(var(--linen), var(--cold-coffee));  
+    height: 220px; 
+    border-bottom: 2px solid brown;
+    padding-top: 30px;
 }
 
 .jumbotron-heading{
@@ -24,19 +26,21 @@
 }
 
 #custom-jumbotron p{
-    color: var(--sour-cherry); 
+    color: var(--almost-pure); 
     background-color: var(--linen);
     text-align: center;
     font-size: 1.5em;
     font-size: bold;
+    background-color: transparent;
 }
 
 #custom-jumbotron>hr{
-    border-top: 3px dashed var(--cold-coffee);  
+    border-top: 3px solid var(--cold-coffee);  
 }
 
 .custom-card { 
-    border: 2px dashed var(--cold-coffee); 
+    border: 2px solid var(--cold-coffee); 
+    left:1%; 
 }
 
 .custom-card-body{
@@ -59,28 +63,28 @@
 .add-project-btn {
     background-color: var(--sour-cherry); 
     text-align:center; 
-    display:block; 
     font-size: 1.5em; 
 }
 
 .add-project-btn:hover{
     cursor: pointer;
-    background-color: #7e0d44;
+    background-color: var(--almost-pure); 
+    color:var(--sour-cherry); 
+    border:2px solid var(--sour-cherry); 
 }
 
 .custom-table {
     position:absolute;  
     width: 75%;  
-    right:0; 
-    top: 380px; 
-    border:2px dashed var(--cold-coffee); 
+    right:1%; 
+    top: 260px; 
+    border:2px solid var(--cold-coffee); 
 }
 
 .table-head th{
     text-align:center; 
     color:var(--sour-cherry); 
     background: linear-gradient(var(--linen), var(--cold-coffee));
-    /* border-bottom: 2px dashed var(--cold-coffee);  */
 }
 
 .custom-table th{
@@ -99,18 +103,46 @@ form {
     width: 50%; 
     margin: 0 auto; 
     position:absolute; 
-    top:50%; 
+    top:25%; 
     left: 25%;  
     z-index:1; 
     border:3px solid var(--cold-coffee); 
     box-shadow: 2px 2px 10px black; 
     padding: 20px; 
+    display:none; 
 }
-.form-label {
 
-select {
+.custom-form input {
+    width:100%; 
+    margin:10px 0;
+    border-radius: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:2px;   
+}
+.custom-form label {
+    color: var(--sour-cherry); 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 18px;
+}
+
+.custom-form select {
     margin-top:10px; 
     margin-bottom:10px; 
+    width:100%; 
+    border-radius: 5px;
+    font-size: 18px;
+    padding:2px; 
+}
+
+.submit-btn {
+    background-color: var(--sour-cherry); 
+    color:var(--almost-pure); 
+}
+
+.submit-btn:hover {
+    background-color: var(--almost-pure); 
+    color:var(--sour-cherry); 
+    border:2px solid var(--sour-cherry); 
 }
 
 @media only screen and (max-width: 1100px) {
