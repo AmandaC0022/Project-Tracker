@@ -1,4 +1,3 @@
-
 //this controls the daily time display at the top 
 var datetime = null,
         date = null;
@@ -8,11 +7,9 @@ var update = function () {
     datetime.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
 };
 
-$(document).ready(function(){
-    datetime = $('#datetime')
-    update();
-    setInterval(update, 1000);
-});
+$( function() {
+    $( "#datepicker" ).datepicker();
+  } );
 
 // Add a function to display form 
 var projectBtn = $(".add-project-btn"); 
@@ -20,6 +17,12 @@ projectBtn.on("click", function() {
     $(".custom-form").show(1000); 
 })
 
+$( function() {
+    $( "#datepicker" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
 
 $(".submit-btn").on("click", function() {
     //Project Name
@@ -36,7 +39,9 @@ $(".submit-btn").on("click", function() {
     var wageValue = $("#hourly-wage").val(); 
     $('#wage-value').text("$" + wageValue); 
     //Due Date 
+    $("#due-date").on("click", function(){
 
+    })
     //hides the form and populates the table 
     $(".custom-form").hide();  
 })
