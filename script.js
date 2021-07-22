@@ -1,3 +1,4 @@
+//this controls the daily time display at the top 
 var datetime = null,
         date = null;
 
@@ -11,3 +12,7 @@ $(document).ready(function(){
     update();
     setInterval(update, 1000);
 });
+
+// Add a function to display form 
+
+// add a function to display form info that populates the table 

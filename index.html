@@ -25,7 +25,7 @@
         <hr class="my-4">
         <p id="datetime"></p>
         <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
         </p>
       </div>
     </hero>
@@ -33,11 +33,22 @@
         <div class="card" style="width: 18rem;">
             <img src="Calendar.jpeg" class="card-img-top" alt="calendar image">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h5 class="card-title">Add a Project</h5>
+              <p class="card-text">Use this helpful Project Tracker to keep tabs on your tasks!</p>
+              <a href="#" class="btn btn-primary">Add Project</a>
             </div>
           </div>
+          <!-- Insert the form here 
+          Use needs to click add task button to be taken to the form 
+          form is displayed in front of page 
+          when form is complete, it populates the table  -->
+          <!-- table needs to include:
+            * name of the project = Project Name 
+            * type of project with a drop down list = Project Type
+            * hourly wage for project = Hourly Wage
+            *the due date of the project (use jQuery's datepicker with a minimum date set in place) = Due Date 
+            * Days until Due Date (use Moment.js to calculate)
+            * Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until due date)-->
           <table class="table">
             <thead>
               <tr>
