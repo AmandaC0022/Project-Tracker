@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Tracker</title>
-    <!-- css link -->
-    <link type="stylesheet" href="styles.css">
     <!-- bootstrap link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <!-- moment.js link  -->
     <script
     type="text/javascript"
@@ -23,8 +23,8 @@
 </head>
 <body>
     <hero>
-      <div class="jumbotron">
-        <h1 class="display-4">Project Tracker</h1>
+      <div id="custom-jumbotron" class="jumbotron">
+        <h1 class="display-4 jumbotron-heading">Project Tracker</h1>
         <p class="lead"> Today's Date & Time</p>
         <hr class="my-4">
         <p id="datetime"></p>

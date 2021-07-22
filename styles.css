@@ -5,3 +5,7 @@
     --sour-cherry: #f10879; 
     --golden: #e0a421; 
 }
+
+#custom-jumbotron{
+    background-color: var(--linen) !Important; 
+}
