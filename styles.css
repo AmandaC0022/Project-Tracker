@@ -5,7 +5,29 @@
     --sour-cherry: #f10879; 
     --golden: #e0a421; 
 }
+* {
+    background-color: var(--almost-pure);
+    font-size: 16px; 
+}
 
 #custom-jumbotron{
     background-color: var(--linen) !Important; 
+}
+
+.jumbotron-heading{
+    text-align: center;
+    color:var(--sour-cherry); 
+    font-size: 4em;
+    background-color: var(--linen);
+}
+
+#custom-jumbotron p{
+    color: var(--sour-cherry); 
+    background-color: var(--linen);
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#custom-jumbotron>hr{
+    border-top: 3px dashed var(--cold-coffee);  
 }
